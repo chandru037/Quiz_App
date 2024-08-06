@@ -1,0 +1,12 @@
+[
+    { "question": "1. Who wrote the play 'Romeo and Juliet'?", "answers": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"], "correct": 0 },
+    { "question": "2. Which planet is known as the Red Planet?", "answers": ["Venus", "Mars", "Jupiter", "Saturn"], "correct": 1 },
+    { "question": "3. In what year did the Titanic sink?", "answers": ["1902", "1912", "1922", "1932"], "correct": 1 },
+    { "question": "4. Who painted the Mona Lisa?", "answers": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"], "correct": 2 },
+    { "question": "5. Which country is known as the Land of the Rising Sun?", "answers": ["China", "Japan", "South Korea", "Thailand"], "correct": 1 },
+    { "question": "6. What is the capital of Australia?", "answers": ["Sydney", "Melbourne", "Canberra", "Brisbane"], "correct": 2 },
+    { "question": "7. Who was the first person to walk on the moon?", "answers": ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"], "correct": 1 },
+    { "question": "8. What is the smallest prime number?", "answers": ["0", "1", "2", "3"], "correct": 2 },
+    { "question": "9. Which famous novel begins with the line, 'It was the best of times, it was the worst of times'?", "answers": ["Pride and Prejudice", "Moby Dick", "A Tale of Two Cities", "Great Expectations"], "correct": 2 },
+    { "question": "10. What is the chemical symbol for water?", "answers": ["H2O", "CO2", "O2", "H2"], "correct": 0 }
+]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/quiz.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="right-links">
+                <li><a href="logout.html" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="image">
+        <img src="gif/Exams.gif" alt="SignIn Image" height="500px" width="600px">
+    </div>
+
+    <div class="quiz-container">
+        <h1>Welcome to the Quiz</h1>
+        <p>Select a category to start:</p>
+        <select class="form-select-mb-3" id="category-select">
+            <option value="" disabled selected>Select a category</option>
+            <option value="general_knowledge.html">General Knowledge</option>
+            <option value="computer_science.html">Computer Science</option>
+            <option value="sport.html">Sports</option>
+            <option value="history.html">History</option>
+            <option value="science_nature.html">Science & Nature</option>
+        </select>
+        <button class="btn btn-primary" id="create-quiz-btn">Create A Quiz</button>
+    </div>
+
+    <!-- Modal for Rules -->
+    <div class="modal fade" id="rules-modal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rulesModalLabel">Quiz Rules</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Rules for the quiz:</p>
+                    <ul>
+                        <li>You have 60 seconds per question.</li>
+                        <li>Select one option per question.</li>
+                        <li>Your score will be displayed at the end.</li>
+                        <li>Click 'Submit' to submit your answer and 'Next' to move to the next question.</li>
+                        <li>Good luck!</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="proceed-btn">Start Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('category-select').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            if (selectedCategory) {
+                // Show the modal
+                var rulesModal = new bootstrap.Modal(document.getElementById('rules-modal'));
+                rulesModal.show();
+                document.getElementById('proceed-btn').onclick = function() {
+                    window.location.href = selectedCategory;
+                };
+            }
+        });
+
+        document.getElementById('create-quiz-btn').addEventListener('click', function() {
+            window.location.href = 'createQuiz.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reg.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="image">
+        <img src="gif/Signin.gif" alt="SignIn Image" height="600px" width="650px">
+    </div>
+    <form class="form" action="home.html" method="POST" onsubmit="return validatePasswords()">
+        <p class="title">Register</p>
+        <label>
+            <input class="input" type="text" name="username" placeholder=" " required>
+            <span>Username</span>
+        </label>
+        <label>
+            <input class="input" type="email" name="email" placeholder=" " required>
+            <span>Email</span>
+        </label>
+        <label>
+            <input class="input" type="password" name="password" id="password" placeholder=" " required>
+            <span>Password</span>
+            <button type="button" class="show-hide-btn" onclick="togglePasswordVisibility('password')">Show</button>
+        </label>
+
+        <label>
+            <input class="input" type="password" name="confirm_password" id="confirm_password" placeholder=" " required>
+            <span>Confirm Password</span>
+            <button type="button" class="show-hide-btn" onclick="togglePasswordVisibility('confirm_password')">Show</button>
+        </label>
+
+        <button type="submit" class="submit">Submit</button>
+        <p class="signin">Already have an account? <a href="login.html">Sign In</a></p>
+    </form>
+
+    <script>
+        function togglePasswordVisibility(id) {
+            var passwordField = document.getElementById(id);
+            var button = passwordField.nextElementSibling;
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                button.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                button.textContent = "Show";
+            }
+        }
+
+        function validatePasswords() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

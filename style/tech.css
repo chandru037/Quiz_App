@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Main Container for the Quiz */
+
+.quiz-container {
+    padding: 20px;
+    margin: 5% auto;
+    max-width: 600px;
+    background-color: #e8e4e4;
+    color: #000000;
+    border-radius: 10px;
+    border: 1px solid #767373;
+}
+
+
+/* Quiz Title */
+
+.quiz-container h1 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+
+/* Notice Section */
+
+.notice {
+    background-color: #fffefe;
+    color: #000000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.notice p {
+    margin: 5px 0;
+}
+
+.notice span {
+    font-weight: bold;
+}
+
+
+/* Question Container */
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* Answers */
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cta-button {
+    /* Your existing button styles */
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ddd;
+}
+
+.cta-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.correct-answer {
+    font-weight: bold;
+    color: green;
+}
+
+
+/* Add hover effect for buttons */
+
+.cta-button {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+/* Active button style with tick */
+
+.cta-button.active {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
+/* Style for tick mark inside option button */
+
+.cta-button::after {
+    content: '✔';
+    visibility: hidden;
+    font-size: 1.2em;
+    color: green;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cta-button.active::after {
+    visibility: visible;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #414040;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.cta-button.active {
+    background-color: #00bfff;
+}
+
+
+/* Add hover effect for buttons */
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Active button style */
+
+.cta-button.active {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
+/* Style for tick button */
+
+.cta-button::after {
+    content: '✔';
+    visibility: hidden;
+    font-size: 1.2em;
+    color: green;
+    position: absolute;
+    right: 10px;
+}
+
+.cta-button.active::after {
+    visibility: visible;
+}
+
+.cta-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.correct-answer {
+    font-weight: bold;
+    color: green;
+}
+
+
+/* Controls */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #00bfff96;
+}
+
+.btn.hide {
+    display: none;
+}
+
+
+/* Timer and Scoreboard */
+
+#time,
+#scoreboard {
+    font-size: 18px;
+    margin-top: 10px;
+}

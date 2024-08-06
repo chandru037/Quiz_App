@@ -1,0 +1,131 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+
+body {
+  background-image: url(image.jpg); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 100vh;
+}
+
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+}
+  
+  
+  /* Main Container for the Quiz */
+  .quiz-container {
+    padding: 20px;
+    margin: 5% auto;
+    max-width: 600px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #333;
+  }
+  
+  /* Quiz Title */
+  .quiz-container h1 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 20px;
+  }
+  
+  /* Notice Section */
+  .notice {
+    background-color: #444;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .notice p {
+    margin: 5px 0;
+  }
+  
+  .notice span {
+    font-weight: bold;
+  }
+  
+  /* Question Container */
+  #question-container {
+    margin-bottom: 20px;
+  }
+  
+  #question {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* Answers */
+  #answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cta-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+  
+  .cta-button.active {
+    background-color: #00bfff;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #00bfff96;
+  }
+  
+  .btn.hide {
+    display: none;
+  }
+  
+  /* Timer and Scoreboard */
+  #time, #scoreboard {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
